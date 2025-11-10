@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.transparenttextures.com/patterns/chess.png');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500;
+            }
+            to {
+                text-shadow: 0 0 20px #FFD700, 0 0 30px #FF4500;
+            }
+        }
+
+        .button {
+            background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            background-size: cover;
+            color: #FFF;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border: 3px solid #DAA520;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), rgba(255, 215, 0, 0.2);
+            background-size: cover;
+        }
+
+        .button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chess-piece {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="text-center">
+        <h1 class="title flex items-center justify-center">
+            <span class="mr-4">Chess Game</span>
+            <span class="chess-piece text-5xl">♔</span>
+        </h1>
+        <div class="mt-10 space-y-6">
+            <button class="button" onclick="alert('Create Game functionality coming soon!')">Create Game</button>
+            <button class="button" onclick="alert('Join Game functionality coming soon!')">Join Game</button>
+            <button class="button" onclick="alert('Exiting game...')">Exit</button>
+        </div>
+    </div>
+</body>
+</html>
